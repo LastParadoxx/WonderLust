@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucket List Examples - Wanderlust</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/wanderlust-logo.svg" alt="Wanderlust Logo">
+                <span class="logo-text">Wanderlust</span>
+            </a>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="form.html">Create List</a></li>
+                <li><a href="wonders.html">Examples</a></li>
+                <li><a href="bucket-list.html">My List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="examples-container">
+        <div class="examples-hero">
+            <h1>Curated Travel Experiences</h1>
+            <p>Discover carefully crafted itineraries for your next adventure</p>
+        </div>
+
+        <div class="examples-filters">
+            <div class="filter-group">
+                <button class="filter-btn active" data-category="all">
+                    <i class="fas fa-globe"></i> All
+                </button>
+                <button class="filter-btn" data-category="adventure">
+                    <i class="fas fa-mountain"></i> Adventure
+                </button>
+                <button class="filter-btn" data-category="culture">
+                    <i class="fas fa-landmark"></i> Culture
+                </button>
+                <button class="filter-btn" data-category="food">
+                    <i class="fas fa-utensils"></i> Food & Dining
+                </button>
+                <button class="filter-btn" data-category="nature">
+                    <i class="fas fa-tree"></i> Nature
+                </button>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search destinations..." id="searchExamples">
+            </div>
+        </div>
+
+        <button class="create-wonder-btn">
+            <i class="fas fa-plus"></i> Share Your Wonder
+        </button>
+
+        <div class="examples-grid">
+            <div class="example-card" data-categories="adventure,nature">
+                <div class="card-image">
+                    <img src="../assets/images/switzerland.jpg" alt="Switzerland">
+                    <div class="card-tags">
+                        <span class="tag adventure">Adventure</span>
+                        <span class="tag nature">Nature</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <h2>Swiss Adventure</h2>
+                    <div class="example-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 14 Days</span>
+                        <span class="budget"><i class="fas fa-coins"></i> $5000-7000</span>
+                    </div>
+                    <div class="activities-preview">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Ride the Glacier Express</li>
+                            <li><i class="fas fa-check"></i> Hike in Zermatt</li>
+                            <li><i class="fas fa-check"></i> Visit Lucerne</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <button class="view-details-btn" data-example="switzerland">
+                            View Full Itinerary <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="like-btn" data-id="switzerland">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="example-card" data-categories="history,culture">
+                <div class="card-image">
+                    <img src="../assets/images/egypt.jpg" alt="Egypt">
+                    <div class="card-tags">
+                        <span class="tag history">History</span>
+                        <span class="tag culture">Culture</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <h2>Egyptian Adventure</h2>
+                    <div class="example-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 10 Days</span>
+                        <span class="budget"><i class="fas fa-coins"></i> $3000-4500</span>
+                    </div>
+                    <div class="activities-preview">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Visit the Great Pyramids</li>
+                            <li><i class="fas fa-check"></i> Nile River Cruise</li>
+                            <li><i class="fas fa-check"></i> Valley of the Kings</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <button class="view-details-btn" data-example="egypt">
+                            View Full Itinerary <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="like-btn" data-id="egypt">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="example-card" data-categories="beach,luxury">
+                <div class="card-image">
+                    <img src="../assets/images/maldives.jpg" alt="Maldives">
+                    <div class="card-tags">
+                        <span class="tag beach">Beach</span>
+                        <span class="tag luxury">Diving</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <h2>Maldives Paradise</h2>
+                    <div class="example-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 7 Days</span>
+                        <span class="budget"><i class="fas fa-coins"></i> $4000-6000</span>
+                    </div>
+                    <div class="activities-preview">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Underwater Restaurant</li>
+                            <li><i class="fas fa-check"></i> Scuba Diving</li>
+                            <li><i class="fas fa-check"></i> Island Hopping</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <button class="view-details-btn" data-example="maldives">
+                            View Full Itinerary <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="like-btn" data-id="maldives">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="example-card" data-categories="beach,nature">
+                <div class="card-image">
+                    <img src="../assets/images/bahamas.jpg" alt="The Bahamas">
+                    <div class="card-tags">
+                        <span class="tag beach">Beach</span>
+                        <span class="tag nature">Snorkeling</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <h2>Bahamas Paradise</h2>
+                    <div class="example-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 7 Days</span>
+                        <span class="budget"><i class="fas fa-coins"></i> $2500-4000</span>
+                    </div>
+                    <div class="activities-preview">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Swim with Pigs</li>
+                            <li><i class="fas fa-check"></i> Snorkel at Coral Reefs</li>
+                            <li><i class="fas fa-check"></i> Visit Paradise Island</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <button class="view-details-btn" data-example="bahamas">
+                            View Full Itinerary <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="like-btn" data-id="bahamas">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="example-card" data-categories="adventure,nature">
+                <div class="card-image">
+                    <img src="../assets/images/newzealand.jpg" alt="New Zealand">
+                    <div class="card-tags">
+                        <span class="tag adventure">Adventure</span>
+                        <span class="tag nature">Nature</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <h2>New Zealand Adventure</h2>
+                    <div class="example-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 14 Days</span>
+                        <span class="budget"><i class="fas fa-coins"></i> $4500-6000</span>
+                    </div>
+                    <div class="activities-preview">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Milford Sound Cruise</li>
+                            <li><i class="fas fa-check"></i> Hobbiton Movie Set</li>
+                            <li><i class="fas fa-check"></i> Bungee Jump in Queenstown</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <button class="view-details-btn" data-example="newzealand">
+                            View Full Itinerary <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="like-btn" data-id="newzealand">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="example-card" data-categories="culture,cuisine">
+                <div class="card-image">
+                    <img src="../assets/images/japan.jpg" alt="Japan">
+                    <div class="card-tags">
+                        <span class="tag culture">Culture</span>
+                        <span class="tag cuisine">Cuisine</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <h2>Japan Discovery</h2>
+                    <div class="example-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 12 Days</span>
+                        <span class="budget"><i class="fas fa-coins"></i> $4000-6000</span>
+                    </div>
+                    <div class="activities-preview">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Visit Ancient Temples</li>
+                            <li><i class="fas fa-check"></i> Sushi Making Class</li>
+                            <li><i class="fas fa-check"></i> Mount Fuji Trek</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <button class="view-details-btn" data-example="japan">
+                            View Full Itinerary <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="like-btn" data-id="japan">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="example-card" data-categories="wellness,beach">
+                <div class="card-image">
+                    <img src="../assets/images/bali1.jpg" alt="Bali">
+                    <div class="card-tags">
+                        <span class="tag wellness">Wellness</span>
+                        <span class="tag beach">Beach</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <h2>Bali Paradise</h2>
+                    <div class="example-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 10 Days</span>
+                        <span class="budget"><i class="fas fa-coins"></i> $2000-3500</span>
+                    </div>
+                    <div class="activities-preview">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Temple Visits</li>
+                            <li><i class="fas fa-check"></i> Rice Terrace Trek</li>
+                            <li><i class="fas fa-check"></i> Yoga Retreat</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <button class="view-details-btn" data-example="bali">
+                            View Full Itinerary <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="like-btn" data-id="bali">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="example-card" data-categories="history,beach">
+                <div class="card-image">
+                    <img src="../assets/images/greece1.jpg" alt="Greece">
+                    <div class="card-tags">
+                        <span class="tag history">History</span>
+                        <span class="tag beach">Islands</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <h2>Greek Adventure</h2>
+                    <div class="example-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 10 Days</span>
+                        <span class="budget"><i class="fas fa-coins"></i> $3500-5000</span>
+                    </div>
+                    <div class="activities-preview">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Acropolis Tour</li>
+                            <li><i class="fas fa-check"></i> Santorini Sunset</li>
+                            <li><i class="fas fa-check"></i> Island Hopping</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <button class="view-details-btn" data-example="greece">
+                            View Full Itinerary <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="like-btn" data-id="greece">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="example-card" data-categories="culture,history">
+                <div class="card-image">
+                    <img src="../assets/images/germany.jpg" alt="Germany">
+                    <div class="card-tags">
+                        <span class="tag culture">Culture</span>
+                        <span class="tag history">History</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <h2>German Adventure</h2>
+                    <div class="example-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 10 Days</span>
+                        <span class="budget"><i class="fas fa-coins"></i> $3500-5000</span>
+                    </div>
+                    <div class="activities-preview">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Neuschwanstein Castle</li>
+                            <li><i class="fas fa-check"></i> Rhine River Cruise</li>
+                            <li><i class="fas fa-check"></i> Berlin Exploration</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <button class="view-details-btn" data-example="germany">
+                            View Full Itinerary <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="like-btn" data-id="germany">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more example cards here -->
+        </div>
+    </main>
+
+    <!-- Enhanced Modal -->
+    <div id="exampleModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalContent" class="modal-grid"></div>
+        </div>
+    </div>
+
+    <!-- Add Wonder Modal -->
+    <div id="addWonderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Share Your Travel Wonder</h2>
+            <form id="wonderForm">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label>Duration</label>
+                    <input type="text" name="duration" placeholder="e.g., 7 Days" required>
+                </div>
+                <div class="form-group">
+                    <label>Budget Range</label>
+                    <input type="text" name="budget" placeholder="e.g., $3000-4000" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Cover Image</label>
+                    <input type="file" name="image" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label>Categories</label>
+                    <div class="category-checkboxes">
+                        <label><input type="checkbox" name="categories" value="adventure"> Adventure</label>
+                        <label><input type="checkbox" name="categories" value="culture"> Culture</label>
+                        <label><input type="checkbox" name="categories" value="nature"> Nature</label>
+                        <label><input type="checkbox" name="categories" value="food"> Food & Dining</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Attractions</label>
+                    <div id="attractions-list">
+                        <!-- Dynamic attraction items will be added here -->
+                    </div>
+                    <button type="button" class="add-item-btn" data-type="attraction">
+                        <i class="fas fa-plus"></i> Add Attraction
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <label>Activities</label>
+                    <div id="activities-list">
+                    </div>
+                    <button type="button" class="add-item-btn" data-type="activity">
+                        <i class="fas fa-plus"></i> Add Activity
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <label>Restaurants</label>
+                    <div id="restaurants-list">
+                    </div>
+                    <button type="button" class="add-item-btn" data-type="restaurant">
+                        <i class="fas fa-plus"></i> Add Restaurant
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label>Icon</label>
+                    <div class="icon-selector">
+                        <div class="icon-option" data-icon="fa-landmark"><i class="fas fa-landmark"></i></div>
+                        <div class="icon-option" data-icon="fa-mountain"><i class="fas fa-mountain"></i></div>
+                        <div class="icon-option" data-icon="fa-water"><i class="fas fa-water"></i></div>
+                        <div class="icon-option" data-icon="fa-utensils"><i class="fas fa-utensils"></i></div>
+                        <div class="icon-option" data-icon="fa-hiking"><i class="fas fa-hiking"></i></div>
+                        <div class="icon-option" data-icon="fa-camera"><i class="fas fa-camera"></i></div>
+                        <div class="icon-option" data-icon="fa-ship"><i class="fas fa-ship"></i></div>
+                        <div class="icon-option" data-icon="fa-plane"><i class="fas fa-plane"></i></div>
+                        <!-- Add more icons as needed -->
+                    </div>
+                    <input type="hidden" name="selectedIcon" id="selectedIcon">
+                </div>
+                <button type="submit" class="submit-btn">Create Wonder</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img src="../assets/images/wanderlust-logo.svg" alt="Wanderlust Logo">
+            <span class="logo-text">Wanderlust</span>
+        </div>
+        <p>&copy; 2024 Wanderlust. All rights reserved.</p>
+    </footer>
+    <script src="../js/exampleData.js"></script>
+    <script src="../js/wonders.js"></script>
+</body>
+</html> 

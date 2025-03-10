@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bucket List - Wanderlust</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="../js/recommendations.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/wanderlust-logo.svg" alt="Wanderlust Logo">
+                <span class="logo-text">Wanderlust</span>
+            </a>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="form.html">Create List</a></li>
+                <li><a href="wonders.html">Examples</a></li>
+                <li><a href="bucket-list.html">My List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="bucket-list-container">
+        <div class="actions">
+            <button id="downloadPDF" class="action-button">
+                <i class="fas fa-download"></i> Download PDF
+            </button>
+            <button id="shareList" class="action-button">
+                <i class="fas fa-share-alt"></i> Share List
+            </button>
+        </div>
+        <div class="filter-section">
+            <div class="search-filters">
+                <input type="text" id="searchInput" placeholder="Search destinations...">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="upcoming">Upcoming Trips</option>
+                    <option value="completed">Completed</option>
+                    <option value="inProgress">In Progress</option>
+                </select>
+                <select id="sortBy">
+                    <option value="date">Sort by Date</option>
+                    <option value="budget">Sort by Budget</option>
+                    <option value="progress">Sort by Progress</option>
+                </select>
+            </div>
+            <div class="view-toggle">
+                <button class="view-button active" data-view="grid">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="view-button" data-view="list">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+        </div>
+        <div class="list-map-container">
+            <div id="map" class="map-container"></div>
+            <div class="bucket-list-section">
+                <div id="bucketListItems" class="bucket-list-items grid-view"></div>
+                <div id="recommendations" class="recommendations-panel">
+                    <h3>Recommended Destinations</h3>
+                    <div id="recommendationsList" class="recommendations-list"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Wanderlust. All rights reserved.</p>
+    </footer>
+    <script src="../js/map.js"></script>
+    <script src="../js/bucket-list.js"></script>
+    <script>
+        initMap();
+    </script>
+</body>
+</html> 
