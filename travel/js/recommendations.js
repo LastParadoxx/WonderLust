@@ -26,4 +26,4 @@ function getRecommendations(selectedActivities) {
     
     return Array.from(recommendations);
 } 
-// This is to do a git 
+// This is to do a git1
